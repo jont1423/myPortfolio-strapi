@@ -7,21 +7,9 @@ import SEO from "../components/seo"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <ul>
-      {data.allStrapiHomepageproject.edges.map(document => (
-        <li key={document.node.id}>
-          <h2>
-            <Link to={`/${document.node.id}`}>{document.node.title}</Link>
-          </h2>
-          <p>{document.node.description}</p>
-          <Img fixed={document.node.projectimage.childImageSharp.fixed}/>
-        </li>
-      ))}
-    </ul>
-    <Link to="/page-2/">Go to page 2</Link>
+    <div style={{margin: `3rem auto`, maxWidth: 600}}>
+      Page Content
+    </div>
   </Layout>
 )
 
