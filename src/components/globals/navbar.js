@@ -24,7 +24,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link } from "gatsby"
 
 
-const drawerWidth = 80;
+const drawerWidth = 75;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -81,35 +81,35 @@ function ResponsiveDrawer(props) {
 				>
 				<List style={{marginTop:"7vh"}}>
 	          		<Grid item>
-	          			<ListItem button component={Link} to="/" style={{ top: 10, left: 10, width: "100%", height: 48, }}>
+	          			<ListItem button component={Link} to="/" style={{ top: 10, left: 6, width: "100%", height: 48, }}>
 		            		<ListItemIcon> 
 			            		<HomeIcon /> 
 		            		</ListItemIcon>
 	            		</ListItem>
 	            	</Grid>
 	            	<Grid item>
-	          			<ListItem button component={Link} to="/projects" style={{ top: 10, left: 10, width: "100%", height: 48 }}>
+	          			<ListItem button component={Link} to="/projects" style={{ top: 10, left: 6, width: "100%", height: 48 }}>
 		            		<ListItemIcon> 
 			            		<EyeIcon /> 
 		            		</ListItemIcon>
 	            		</ListItem>
 	            	</Grid>
 	            	<Grid item>
-	          			<ListItem button style={{ top: 10, left: 10, width: "100%", height: 48 }}>
+	          			<ListItem button style={{ top: 10, left: 6, width: "100%", height: 48 }}>
 		            		<ListItemIcon> 
 			            		<BarChart /> 
 		            		</ListItemIcon>
 	            		</ListItem>
 	            	</Grid>
 	            	<Grid item>
-	          			<ListItem button style={{ top: 10, left: 10, width: "100%", height: 48 }}>
+	          			<ListItem button style={{ top: 10, left: 6, width: "100%", height: 48 }}>
 		            		<ListItemIcon> 
 			            		<Chat /> 
 		            		</ListItemIcon>
 	            		</ListItem>
 	            	</Grid>
 	            	<Grid item>
-	          			<ListItem button style={{ top: 10, left: 10, width: "100%", height: 48 }}>
+	          			<ListItem button style={{ top: 10, left: 6, width: "100%", height: 48 }}>
 		            		<ListItemIcon> 
 			            		<NotesIcon /> 
 		            		</ListItemIcon>

@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
+import TextLoop from '../homeTextLoop.js'
 
 const BackgroundSection = ({ className, styleClass }) => (
     <StaticQuery query={graphql`
@@ -25,6 +26,7 @@ const BackgroundSection = ({ className, styleClass }) => (
                            fluid={imageData}
                            backgroundColor={`#040e18`}
           >
+            <TextLoop />
           </BackgroundImage>
        )
      }
