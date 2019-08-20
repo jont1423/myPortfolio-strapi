@@ -1,40 +1,52 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import styled from 'styled-components'
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import styled from "styled-components"
+import TextLoop from "react-text-loop"
+import BackgroundImage from "gatsby-background-image"
 
-import BackgroundImage from 'gatsby-background-image'
-import TextLoop from '../homeTextLoop.js'
+import "./backgroundSection.css"
 
 const BackgroundSection = ({ className, styleClass }) => (
-    <StaticQuery query={graphql`
+  <StaticQuery
+    query={graphql`
       query {
-        backgroundImage: file(relativePath: { eq: "background-image-home.jpg" }) {
+        backgroundImage: file(
+          relativePath: { eq: "background-image-home.jpg" }
+        ) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
+            fluid(quality: 100, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
       }
     `}
-     render={data => {
-       // Set ImageData.
-       const imageData = data.backgroundImage.childImageSharp.fluid
-       return (
-          <BackgroundImage Tag="section"
-                           className={className}
-                           fluid={imageData}
-                           backgroundColor={`#040e18`}
-          >
-            <TextLoop />
-          </BackgroundImage>
-       )
-     }
-     }
-    />
+    render={data => {
+      // Set ImageData.
+      const imageData = data.backgroundImage.childImageSharp.fluid
+      return (
+        <BackgroundImage
+          Tag="section"
+          className={className}
+          fluid={imageData}
+          backgroundColor={`#040e18`}
+        >
+          <div className="wrapperDiv">
+            <div>Hi, I'm Jon!</div>
+            <TextLoop
+              springConfig={{ stiffness: 180, damping: 8 }}
+              adjustingSpeed={500}
+            >
+              <div>Full-stack Web Developer</div>
+              <div>UI/UX Designer</div>
+              <div>ReactJs</div>
+            </TextLoop>
+          </div>
+        </BackgroundImage>
+      )
+    }}
+  />
 )
-
-
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;
