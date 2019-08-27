@@ -1,8 +1,6 @@
-## 🚀  My Portfolio Site
+
 
 1.  **Created using GatsbyJS, StrapiCMS, and React Bootstrap**
-
-    This is the repository for my GatsbyJS portfolio site.
 
 
 ## What's inside?
